@@ -13,4 +13,3 @@ Feature: Onliner's "Барахолка" feature testing
         When "Лопата" was entered in the search bar
         Then Click "Search" button
         Then Headers  "Все", "Продам", "Куплю", "Обмен", "Услуга", "Аренда", "Закрыто" were presented for user
-        TES
