@@ -1,15 +1,13 @@
 @smoke
-Feature: Onliner's "Барахолка" feature testing
-    #Description: Check user redirection to "Барахолка" from Onliner.by homepage and also check search
-
-    Scenario: Click on "Барахолка" hyperlink which located inside the onliner.by header
+Feature: Onliner's Header and Footer feature testing
+    #Description: Check "Дома и квартиры" link from Header + check "Манифест" link from Footer
+    Scenario: Click on "Дома и квартиры" hyperlink which located inside the onliner.by header
         Given Homepage onliner.by was opened
-        When Click on "Барахолка" hyperlink 
-        Then User was redirected to specific "Барахолка" page baraholka.onliner.by
+        When Click on "Дома и квартиры" hyperlink 
+        Then User was redirected to specific "Дома и квартиры" page https://r.onliner.by/pk/
 
 
-    Scenario: Search "Лопата" via search bar which located on "Барахолка" page
-        Given "Барахолка" page was opened
-        When "Лопата" was entered in the search bar
-        Then Click "Search" button
-        Then Headers  "Все", "Продам", "Куплю", "Обмен", "Услуга", "Аренда", "Закрыто" were presented for user
+    Scenario: Click on "Манифест" hyperlink which located inside the onliner.by footer
+        Given Homepage onliner.by was opened
+        When Click on "Манифест" hyperlink 
+        Then User was redirected to specific "Манифест" page https://blog.onliner.by/manifest
