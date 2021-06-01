@@ -10,4 +10,4 @@ Feature: Onliner's Header and Footer feature testing
     Scenario: Click on "Манифест" hyperlink which located inside the onliner.by footer
         Given Homepage onliner.by was opened
         When Click on "Манифест" hyperlink 
-        Then User was redirected to specific "Манифест" page https://blog.onliner.by/manifest
+        Then User was redirected to specific "Манифест" page

@@ -25,7 +25,7 @@ export class HeaderPage {
         await this.headerRepo.domLink.click();
     }
 
-    public async checkOpenedPage() {
+    public async checkOpenedHousePage() {
         await browser.navigate().to(browser.params.houseUrl);
         await browser.wait(ExpectedConditions.urlIs(browser.params.houseUrl), defaultTimeout, "Timeout error");
     }   

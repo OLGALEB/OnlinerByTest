@@ -21,12 +21,12 @@ export class FooterPage {
         browser.navigate().to(browser.params.onlinerByURL);
     }
 
-    public async clickVacancies() {
+    public async clickManifest() {
         await this.footerRepo.manifestLink.click();
     }
 
-    public async checkTitleByTag() {
-       await browser.wait(ExpectedConditions.visibilityOf(await this.footerRepo.manifestLink), defaultTimeout, "Page was not loaded");
-    }
-
+    public async checkOpenedManifestPage() {
+        await browser.navigate().to(browser.params.houseUrl);
+        await browser.wait(ExpectedConditions.urlIs(browser.params.manifestUrl), defaultTimeout, "Timeout error");
+    }   
 }

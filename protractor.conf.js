@@ -16,7 +16,8 @@ exports.config = {
     params: {
         defaultTimeout: 60000,
         onlinerByURL: "https://www.onliner.by/",
-        houseUrl: "https://r.onliner.by/pk/"
+        houseUrl: "https://r.onliner.by/pk/",
+        manifestUrl: "https://blog.onliner.by/manifest"
     },
 
 
