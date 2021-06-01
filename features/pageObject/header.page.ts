@@ -21,11 +21,12 @@ export class HeaderPage {
         browser.navigate().to(browser.params.onlinerByURL);
     }
 
-    public async clickServices() {
+    public async clickHouseLink() {
         await this.headerRepo.domLink.click();
     }
 
-    public async checkTitleByClass() {
-       await browser.wait(ExpectedConditions.visibilityOf(await this.headerRepo.domLink), defaultTimeout, "Page was not loaded");
-    }
+    public async checkOpenedPage() {
+        await browser.navigate().to(browser.params.houseUrl);
+        await browser.wait(ExpectedConditions.urlIs(browser.params.houseUrl), defaultTimeout, "Timeout error");
+    }   
 }
